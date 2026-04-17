@@ -4,18 +4,17 @@ public class TestStatistics {
     static void main(){
         int[] testScores = {34,54,98,70,89,67,21,90,43,88};
         int max = testScores[0];
-        int index = 0;
         int min = testScores[0];
         int sum =0;
-        while (index< testScores.length-1){
-            if (testScores[index]>max){
-                max = testScores[index];
-            } else if (testScores[index]<min) {
-                min = testScores[index];
+        for (int score: testScores){
+            if (score > max){
+                max = score;
+            } else if (score<min) {
+                min = score;
 
             }
-            sum += testScores[index];
-            index++;
+            sum += score;
+
         }
         double median;
         Arrays.sort(testScores);
